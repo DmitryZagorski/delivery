@@ -65,11 +65,6 @@ public class OrderService {
                                             middle.add(new Order(a, b, c, product, f));
                                             middleInt = f;
                                             System.out.println("The order is added.");
-                                            /*for (int i = 0; i < shop.getProductList().size(); i++) {
-                                                if (shop.getProductList().get(i).getName().equals(product.getName())) {
-                                                    shop.getProductList().get(i).setCount(shop.getProductList().get(i).getCount() - f);
-                                                }
-                                            }*/
                                         }
                                     }
                                 }
