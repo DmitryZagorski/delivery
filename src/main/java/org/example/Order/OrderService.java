@@ -34,7 +34,7 @@ public class OrderService {
         for (Client client : clients) {
             if (!(a.equals(client.getName()))) {
             } else {
-                System.out.println("Enter client's phone number.");
+                System.out.println("Enter client's phone number.(9 digits)");
                 int b = Integer.parseInt(reader.readLine());
                 for (Client client1 : clients) {
                     if (b != client1.getPhoneNumber()) {
@@ -95,7 +95,7 @@ public class OrderService {
         List<Order> orders = orderDataBase.getOrdersFromFile();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the phone number of client you want to remove.");
+        System.out.println("Enter the phone number of client you want to remove.(9 digits)");
         String a = reader.readLine();
         for (Order order : orders) {
             if (order.getClientPhoneNumber() == Integer.parseInt(a)) {

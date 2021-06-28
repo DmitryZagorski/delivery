@@ -25,7 +25,7 @@ public class ClientService {
         List<Client> clients = clientDataBase.getClientsFromFile();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the phone number of client you want to remove.");
+        System.out.println("Enter the phone number of client you want to remove. ( 9 digits)");
         int a = Integer.parseInt(reader.readLine());
         int count = 0;
         for (Client client : clients) {
@@ -48,7 +48,7 @@ public class ClientService {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the name of client you want to add.");
         String a = reader.readLine();
-        System.out.println("Enter the phone number if client you want to add.");
+        System.out.println("Enter the phone number if client you want to add.(9 digits)");
         int b = Integer.parseInt(reader.readLine());
         int count = 0;
         for (Client client : clients) {
@@ -72,7 +72,7 @@ public class ClientService {
         List<Client> clients = clientDataBase.getClientsFromFile();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the phone number of client you want to change name.");
+        System.out.println("Enter the phone number of client you want to change name.(9 digits)");
         int a = Integer.parseInt(reader.readLine());
         for (Client client : clients) {
             if (a == client.getPhoneNumber()) {
@@ -91,11 +91,11 @@ public class ClientService {
         List<Client> clients = clientDataBase.getClientsFromFile();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the phone number of client you want to change.");
+        System.out.println("Enter the phone number of client you want to change.(9 digits)");
         int a = Integer.parseInt(reader.readLine());
         for (Client client : clients) {
             if (a == client.getPhoneNumber()) {
-                System.out.println("Enter new phone number.");
+                System.out.println("Enter new phone number.(9 digits)");
                 int b = Integer.parseInt(reader.readLine());
                 client.setPhoneNumber(b);
             } else {
