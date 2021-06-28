@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="delivery:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c28e8110-19ec-4c72-bc8a-ddbb2623c121" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/delivery_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/delivery_jar/delivery.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Client/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Client/ClientDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Client/ClientJsonDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Client/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Order/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Order/OrderDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Order/OrderJsonDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Order/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Product/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Product/ProductCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Shop/Shop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Shop/ShopDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Shop/ShopJsonDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Shop/ShopService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Client/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Client/ClientDataBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Client/ClientJsonDataBase$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Client/ClientJsonDataBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Client/ClientService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Order/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Order/OrderDataBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Order/OrderJsonDataBase$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Order/OrderJsonDataBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Order/OrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Product/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Product/ProductCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Shop/Shop.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Shop/ShopDataBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Shop/ShopJsonDataBase$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Shop/ShopJsonDataBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Shop/ShopService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/delivery-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1uMUD8Js1SS4t7aibf1ciQqpOZW" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/example" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example.Order" />
+      <recent name="org.example.Shop" />
+      <recent name="org.example.Client" />
+      <recent name="org.example.Product" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+      <module name="delivery" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Order.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c28e8110-19ec-4c72-bc8a-ddbb2623c121" name="Default Changelist" comment="" />
+      <created>1624474828225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624474828225</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="317" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1624739137073">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="317" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1024.728@0.0.1024.728" timestamp="1624739137073" />
+    <state x="242" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1624811690983">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="242" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1024.728@0.0.1024.728" timestamp="1624811690983" />
+    <state x="308" y="222" width="407" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1624699727603">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="308" y="222" width="407" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1024.728@0.0.1024.728" timestamp="1624699727603" />
+    <state x="259" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1624700731411">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="259" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1024.728@0.0.1024.728" timestamp="1624700731411" />
+    <state x="242" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1624550034408">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="242" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1024.728@0.0.1024.728" timestamp="1624550034408" />
+    <state x="292" y="104" key="FileChooserDialogImpl" timestamp="1624811735240">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="292" y="104" key="FileChooserDialogImpl/0.0.1024.728@0.0.1024.728" timestamp="1624811735240" />
+    <state width="980" height="273" key="GridCell.Tab.0.bottom" timestamp="1624821328765">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="273" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1624821328765" />
+    <state width="980" height="273" key="GridCell.Tab.0.center" timestamp="1624821328765">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="273" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1624821328765" />
+    <state width="980" height="273" key="GridCell.Tab.0.left" timestamp="1624821328764">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="273" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1624821328764" />
+    <state width="980" height="273" key="GridCell.Tab.0.right" timestamp="1624821328765">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="273" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1624821328765" />
+    <state width="980" height="166" key="GridCell.Tab.1.bottom" timestamp="1624790234259">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="166" key="GridCell.Tab.1.bottom/0.0.1024.728@0.0.1024.728" timestamp="1624790234259" />
+    <state width="980" height="166" key="GridCell.Tab.1.center" timestamp="1624790234259">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="166" key="GridCell.Tab.1.center/0.0.1024.728@0.0.1024.728" timestamp="1624790234259" />
+    <state width="980" height="166" key="GridCell.Tab.1.left" timestamp="1624790234259">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="166" key="GridCell.Tab.1.left/0.0.1024.728@0.0.1024.728" timestamp="1624790234259" />
+    <state width="980" height="166" key="GridCell.Tab.1.right" timestamp="1624790234259">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="166" key="GridCell.Tab.1.right/0.0.1024.728@0.0.1024.728" timestamp="1624790234259" />
+    <state x="42" y="18" key="Maven.ArtifactSearchDialog" timestamp="1624652191731">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="42" y="18" key="Maven.ArtifactSearchDialog/0.0.1024.728@0.0.1024.728" timestamp="1624652191731" />
+    <state x="0" y="0" key="SettingsEditor" timestamp="1624811781275">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="0" y="0" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1624811781275" />
+    <state x="328" y="141" key="chooseDestDirectoryDialog" timestamp="1624699679676">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="328" y="141" key="chooseDestDirectoryDialog/0.0.1024.728@0.0.1024.728" timestamp="1624699679675" />
+    <state x="316" y="232" key="classpath-attribute-editor" timestamp="1624805927581">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="316" y="232" key="classpath-attribute-editor/0.0.1024.728@0.0.1024.728" timestamp="1624805927581" />
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1624897699352">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1624897699352" />
+    <state x="216" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1624554556826">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="216" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1024.728@0.0.1024.728" timestamp="1624554556826" />
+    <state x="168" y="157" key="run.anything.popup" timestamp="1624723260938">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="168" y="157" key="run.anything.popup/0.0.1024.728@0.0.1024.728" timestamp="1624723260938" />
+    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1624725478837">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1024.728@0.0.1024.728" timestamp="1624725478837" />
+  </component>
+</project>
