@@ -89,6 +89,9 @@ public class ShopService {
                 prCat = middleAr.toArray(prCat);
                 shop.getProductList().add(new Product(b,c,d,prCat));
             }
+            else {
+                System.out.println("Wrong name.");
+            }
         }
         shopDataBase.writeShopsToFile(shops);
     }
