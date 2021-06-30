@@ -68,18 +68,26 @@ public class ShopService {
                         "2 - Clothes\n" +
                         "3 - Other");
                 String e = bufferedReader.readLine();
-                if (e.equals("1")) {
-                    shop.getProductList().add(new Product(b, c, d, new String[]{ProductCategory.food.getName()}));
+                String[] array = e.split(",");
+                List<String> middleAr = new ArrayList<>();
+                for (int i = 0; i < array.length; i++) {
+                    if (array[i].trim().equals("1")){
+                        middleAr.add(ProductCategory.food.getName());
+                    }
+                    if (array[i].trim().equals("2")){
+                        middleAr.add(ProductCategory.clothes.getName());
+                    }
+                    if (array[i].trim().equals("3")){
+                        middleAr.add(ProductCategory.other.getName());
+                    }
+                    else  {
+                        System.out.println("Wrong enter. Try one more time.");
+                    }
                 }
-                if (e.equals("2")) {
-                    shop.getProductList().add(new Product(b, c, d, new String[]{ProductCategory.clothes.getName()}));
-                }
-                if (e.equals("3")) {
-                    shop.getProductList().add(new Product(b, c, d, new String[]{ProductCategory.other.getName()}));
-                }
-                if (!(e.equals("1")) && !(e.equals("2")) && !(e.equals("3"))) {
-                    System.out.println("Wrong enter. Try one more time.");
-                }
+                int l = middleAr.size();
+                String[] prCat = new String[l];
+                prCat = middleAr.toArray(prCat);
+                shop.getProductList().add(new Product(b,c,d,prCat));
             }
         }
         shopDataBase.writeShopsToFile(shops);
