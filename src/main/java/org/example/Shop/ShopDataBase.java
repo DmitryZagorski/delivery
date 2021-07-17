@@ -7,6 +7,7 @@ public interface ShopDataBase {
     List<Shop> getShopsFromFile();
 
     void writeShopsToFile(List<Shop> shops);
+    
 
 
 }
