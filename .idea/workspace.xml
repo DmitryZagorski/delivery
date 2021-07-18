@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c28e8110-19ec-4c72-bc8a-ddbb2623c121" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +45,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/example" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -164,14 +166,18 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="316" y="232" key="classpath-attribute-editor/0.0.1024.728@0.0.1024.728" timestamp="1624805927581" />
-    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1625073272664">
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1625315432120">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1625073272664" />
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1625315432120" />
     <state x="216" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1624554556826">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="216" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1024.728@0.0.1024.728" timestamp="1624554556826" />
+    <state x="0" y="58" key="new project wizard" timestamp="1625161882753">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="0" y="58" key="new project wizard/0.0.1024.728@0.0.1024.728" timestamp="1625161882753" />
     <state x="168" y="157" key="run.anything.popup" timestamp="1624723260938">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
