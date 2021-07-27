@@ -1,13 +1,13 @@
-package org.example.Shop;
+package org.example;
+
+import org.example.Client.Client;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
+import java.util.List;
 
-public interface ShopSQL {
+public interface InterfaceSQL {
     Connection getConnection();
 
-    ResultSet getShopsFromSQL();
-
-
+    List<Client> getListOfClientsFromSQL();
 
 }

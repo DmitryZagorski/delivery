@@ -1,11 +1,24 @@
 package org.example.Client;
 
+import org.example.InterfaceSQL;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClientService {
+
+    public InterfaceSQL interfaceSQL;
+
+    public ClientService(InterfaceSQL interfaceSQL) {
+        this.interfaceSQL = interfaceSQL;
+    }
+
     private ClientDataBase clientDataBase;
 
     public ClientService(ClientDataBase clientDataBase) {
@@ -106,5 +119,48 @@ public class ClientService {
         clientDataBase.writeClientsToFile(clients);
     }
 
+    //     SQL
+
+    public void addClientToListSQL() throws IOException {
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter the name of client you want to add to SQL.");
+        String nameR = reader.readLine();
+        System.out.println("Enter the phone number if client you want to add to SQL.(9 digits)");
+        int phoneR = Integer.parseInt(reader.readLine());
+        Connection connection = interfaceSQL.getConnection();
+        Statement statement = null;
+
+        List<Client> clients = interfaceSQL.getListOfClientsFromSQL();
+        int count = 0;
+        for (Client client : clients) {
+            if (client.getPhoneNumber() == phoneR) {
+                count++;
+            }
+        }
+        String r = phoneR + "";
+        String[] array = r.split("");
+        if (count == 0 && array.length == 9) {
+            try{
+                statement = connection.createStatement();
+               // statement.execute("insert into delivery.clients (name, phoneNumber) values" +
+                 //       " (" + nameR + "," + phoneR + ")");
+                String q = "insert into delivery.clients (name, phoneNumber) values" +
+                        " (" + nameR + "," + phoneR + ")";
+                statement.execute(q);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if (count > 0) {
+            System.out.println("Client with that phone number already exist.");
+        }
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }

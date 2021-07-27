@@ -2,6 +2,7 @@ package org.example.Order;
 
 import org.example.Client.Client;
 import org.example.Client.ClientJsonDataBase;
+import org.example.InterfaceSQL;
 import org.example.Product.Product;
 import org.example.Shop.Shop;
 import org.example.Shop.ShopJsonDataBase;
@@ -13,8 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderService {
-    private OrderDataBase orderDataBase;
 
+    private InterfaceSQL interfaceSQL;
+    public OrderService(InterfaceSQL interfaceSQL){
+        this.interfaceSQL = interfaceSQL;
+    }
+
+    private OrderDataBase orderDataBase;
     public OrderService(OrderDataBase orderDataBase) {
         this.orderDataBase = orderDataBase;
     }

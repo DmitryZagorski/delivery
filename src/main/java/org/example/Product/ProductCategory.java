@@ -18,8 +18,8 @@ public class ProductCategory {
                 '}';
     }
 
-    public static ProductCategory food = new ProductCategory("Food");
-    public static ProductCategory clothes = new ProductCategory("Clothes");
-    public static ProductCategory other = new ProductCategory("Other");
+    public static final ProductCategory food = new ProductCategory("Food");
+    public static final ProductCategory clothes = new ProductCategory("Clothes");
+    public static final ProductCategory other = new ProductCategory("Other");
 
 }

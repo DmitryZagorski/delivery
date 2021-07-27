@@ -1,7 +1,9 @@
 package org.example.Shop;
 
+import org.example.InterfaceSQL;
 import org.example.Product.Product;
 import org.example.Product.ProductCategory;
+import org.example.SQLConnector;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,8 +14,12 @@ import java.util.List;
 
 public class ShopService {
 
-    private ShopDataBase shopDataBase;
+    private InterfaceSQL interfaceSQL;
+    public ShopService(InterfaceSQL interfaceSQL){
+        this.interfaceSQL = interfaceSQL;
+    }
 
+    private ShopDataBase shopDataBase;
     public ShopService(ShopDataBase shopDataBase) {
         this.shopDataBase = shopDataBase;
     }
@@ -337,6 +343,10 @@ public class ShopService {
             }
         }
     }
+
+    //  SQL
+
+
 
 }
 

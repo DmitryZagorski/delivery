@@ -9,5 +9,4 @@ public interface ShopDataBase {
     void writeShopsToFile(List<Shop> shops);
 
 
-
 }

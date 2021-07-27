@@ -1,19 +1,19 @@
 package org.example;
 
-import org.example.Product.Product;
-import org.example.Shop.ShopSQL;
+import org.example.Client.Client;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
-public class ShopSQLDataBase implements ShopSQL {
+public class SQLConnector implements InterfaceSQL {
 
     private static final String URL = "jdbc:mysql://localhost:3306/mydbtest?useUnicode=true&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private static final String NAME = "root";
     private static final String PASSWORD = "root";
 
     Connection connection;
-    Statement statement;
+
 
     @Override
     public Connection getConnection() {
@@ -21,13 +21,11 @@ public class ShopSQLDataBase implements ShopSQL {
             if(connection!=null){
                 return connection;
             }
-            else {
-                connection = DriverManager.getConnection(URL, NAME, PASSWORD);
-            }
-            statement = connection.createStatement();
-            if (!connection.isClosed()){
-                System.out.println("Подключено к SQL");
-            }
+            connection = DriverManager.getConnection(URL, NAME, PASSWORD);
+
+            //if (!connection.isClosed()){
+           //     System.out.println("Connected to SQL");
+           // }
         }
         catch (SQLException e){
             e.printStackTrace();
@@ -36,25 +34,21 @@ public class ShopSQLDataBase implements ShopSQL {
     }
 
     @Override
-    public ResultSet getShopsFromSQL() {
-        ResultSet resultSet=null;
-        ResultSet resultSet1=null;
-
+    public List<Client> getListOfClientsFromSQL() {
+        getConnection();
+        List<Client> clients = new ArrayList<>();
+        Statement statement;
+        ResultSet resultSet;
         try {
-            resultSet = statement.executeQuery("select name from delivery.shops");
-            resultSet1 = statement.executeQuery("select name from delivery.products");
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("select * from delivery.clients");
             while (resultSet.next()){
-                int id;
-                String name;
-                List<Product> productList;
-                id = resultSet.getInt("id");
-                name  = resultSet.getString("name");
-
+                clients.add(new Client(resultSet.getString("name"), resultSet.getInt("phoneNumber")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        return resultSet;
+        return clients;
     }
+
 }
