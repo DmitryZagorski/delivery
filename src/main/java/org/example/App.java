@@ -13,13 +13,14 @@ import org.example.Shop.ShopService;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 
 /**
  * Hello world!
  */
 public class App {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException {
 
         InterfaceSQL interfaceSQL = new SQLConnector();
 
