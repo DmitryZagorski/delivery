@@ -17,9 +17,10 @@ public class ShopJsonDataBase implements ShopDataBase {
     private final Gson gson = new Gson();
 
     public ShopJsonDataBase() {
-        if (!(new File(FILE_SHOPS).exists())){
-        List<Shop> shops = new ArrayList<>();
-        writeShopsToFile(shops);}
+        if (!(new File(FILE_SHOPS).exists())) {
+            List<Shop> shops = new ArrayList<>();
+            writeShopsToFile(shops);
+        }
     }
 
     @Override
@@ -42,6 +43,4 @@ public class ShopJsonDataBase implements ShopDataBase {
             throw new IllegalStateException(e);
         }
     }
-
-
 }

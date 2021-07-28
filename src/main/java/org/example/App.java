@@ -22,20 +22,14 @@ public class App {
 
     public static void main(String[] args) throws IOException, SQLException {
 
-        InterfaceSQL interfaceSQL = new SQLConnector();
-
         ShopDataBase shopDataBase = new ShopJsonDataBase();
         ShopService shopService = new ShopService(shopDataBase);
-        ShopService shopService1 = new ShopService(interfaceSQL);
 
         OrderDataBase orderDataBase = new OrderJsonDataBase();
         OrderService orderService = new OrderService(orderDataBase);
-        OrderService orderService1 = new OrderService(interfaceSQL);
 
         ClientDataBase clientDataBase = new ClientJsonDataBase();
         ClientService clientService = new ClientService(clientDataBase);
-        ClientService clientService1 = new ClientService(interfaceSQL);
-
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Hello!\n" +
@@ -59,7 +53,8 @@ public class App {
                     System.out.println("What do you want to do?\n" +
                             "'1' - do something with shops.\n" +
                             "'2' - do something with clients.\n" +
-                            "'3' - do something with orders.");
+                            "'3' - do something with orders.\n" +
+                            "'end' - break");
                     String s = reader.readLine();
                     if (s.equals("1")) {
                         System.out.println(
@@ -119,7 +114,6 @@ public class App {
                         String s1 = reader.readLine();
                         if (s1.equals("1")) {
                             clientService.addClientToClientList();
-                            clientService1.addClientToListSQL();
                         }
                         if (s1.equals("2")) {
                             clientService.deleteClientFromClientList();
@@ -134,7 +128,6 @@ public class App {
                             clientService.changePhoneNumberOfClientByPhoneNumber();
                         }
                     }
-
                     if (s.equals("3")) {
                         System.out.println(
                                 "'1' - add new order.\n" +
@@ -151,14 +144,17 @@ public class App {
                             orderService.printListOfOrders();
                         }
                     }
+                    if (s.equals("end")){
+                        break;
+                    }
                 }
             }
-
             if (a.equals("2")) {
                 System.out.println("What do you want to do?\n" +
                         "'1' - do something with shops.\n" +
                         "'2' - do something with clients.\n" +
-                        "'3' - do something with orders.");
+                        "'3' - do something with orders.\n" +
+                        "'end' - break.");
                 String c = reader.readLine();
                 if (c.equals("1")) {
                     System.out.println(
@@ -208,9 +204,11 @@ public class App {
                         orderService.deleteOrderFromOrderList();
                     }
                 }
+                if(c.equals("end")){
+                    break;
+                }
             }
         }
     }
-
 }
 

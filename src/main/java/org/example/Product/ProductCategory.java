@@ -17,9 +17,7 @@ public class ProductCategory {
                 "name='" + name + '\'' +
                 '}';
     }
-
     public static final ProductCategory food = new ProductCategory("Food");
     public static final ProductCategory clothes = new ProductCategory("Clothes");
     public static final ProductCategory other = new ProductCategory("Other");
-
 }

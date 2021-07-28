@@ -2,7 +2,6 @@ package org.example.Order;
 
 import org.example.Client.Client;
 import org.example.Client.ClientJsonDataBase;
-import org.example.InterfaceSQL;
 import org.example.Product.Product;
 import org.example.Shop.Shop;
 import org.example.Shop.ShopJsonDataBase;
@@ -15,12 +14,8 @@ import java.util.List;
 
 public class OrderService {
 
-    private InterfaceSQL interfaceSQL;
-    public OrderService(InterfaceSQL interfaceSQL){
-        this.interfaceSQL = interfaceSQL;
-    }
-
     private OrderDataBase orderDataBase;
+
     public OrderService(OrderDataBase orderDataBase) {
         this.orderDataBase = orderDataBase;
     }
@@ -70,7 +65,7 @@ public class OrderService {
                                             orders.add(new Order(a, b, c, product, f));
                                             middle.add(new Order(a, b, c, product, f));
                                             middleInt = f;
-                                            System.out.println("The order is added.");
+                                            System.out.println("The order was added successfully.");
                                         }
                                     }
                                 }
@@ -92,7 +87,6 @@ public class OrderService {
         } else {
             System.out.println("Something wrong.");
         }
-
         orderDataBase.writeOrdersToFile(orders);
         new ShopJsonDataBase().writeShopsToFile(shops);
     }
@@ -106,11 +100,11 @@ public class OrderService {
         for (Order order : orders) {
             if (order.getClientPhoneNumber() == Integer.parseInt(a)) {
                 orders.remove(order);
+                System.out.println("The order was deleted successfully.");
             } else {
                 System.out.println("There is no orders with that phone number.");
             }
         }
-
         orderDataBase.writeOrdersToFile(orders);
     }
 
@@ -125,5 +119,4 @@ public class OrderService {
                     (order.getProduct().getPrice() * order.getProductCount()) + " euro" + "\n");
         }
     }
-
 }

@@ -41,6 +41,5 @@ public class ClientJsonDataBase implements ClientDataBase {
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
-
     }
 }

@@ -1,9 +1,7 @@
 package org.example.Shop;
 
-import org.example.InterfaceSQL;
 import org.example.Product.Product;
 import org.example.Product.ProductCategory;
-import org.example.SQLConnector;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,12 +12,8 @@ import java.util.List;
 
 public class ShopService {
 
-    private InterfaceSQL interfaceSQL;
-    public ShopService(InterfaceSQL interfaceSQL){
-        this.interfaceSQL = interfaceSQL;
-    }
-
     private ShopDataBase shopDataBase;
+
     public ShopService(ShopDataBase shopDataBase) {
         this.shopDataBase = shopDataBase;
     }
@@ -38,6 +32,7 @@ public class ShopService {
         }
         if (count == 0) {
             shops.add(new Shop(a, new ArrayList<>()));
+            System.out.println("Shop was added successfully.");
         }
         if (count > 0) {
             System.out.println("That shop already exist.");
@@ -77,25 +72,24 @@ public class ShopService {
                 String[] array = e.split(",");
                 List<String> middleAr = new ArrayList<>();
                 for (int i = 0; i < array.length; i++) {
-                    if (array[i].trim().equals("1")){
+                    if (array[i].trim().equals("1")) {
                         middleAr.add(ProductCategory.food.getName());
                     }
-                    if (array[i].trim().equals("2")){
+                    if (array[i].trim().equals("2")) {
                         middleAr.add(ProductCategory.clothes.getName());
                     }
-                    if (array[i].trim().equals("3")){
+                    if (array[i].trim().equals("3")) {
                         middleAr.add(ProductCategory.other.getName());
-                    }
-                    else  {
+                    } else {
                         System.out.println("Wrong enter. Try one more time.");
                     }
                 }
                 int l = middleAr.size();
                 String[] prCat = new String[l];
                 prCat = middleAr.toArray(prCat);
-                shop.getProductList().add(new Product(b,c,d,prCat));
-            }
-            else {
+                shop.getProductList().add(new Product(b, c, d, prCat));
+                System.out.println("Product was added to shop successfully.");
+            } else {
                 System.out.println("Wrong name.");
             }
         }
@@ -113,6 +107,7 @@ public class ShopService {
             if (a.equals(shop.getName())) {
                 shops.remove(shop);
                 count++;
+                System.out.println("Shop was deleted from the shoplist successfully.");
             }
         }
         if (count == 0) {
@@ -136,6 +131,7 @@ public class ShopService {
                     if ((shop.getProductList().get(i).getName()).equals(b)) {
                         shop.getProductList().remove(i);
                         count++;
+                        System.out.println("Product was deleted from the shop successfully.");
                     }
                 }
                 if (count == 0) {
@@ -156,7 +152,7 @@ public class ShopService {
             if (a.equals(shop.getName())) {
                 for (int i = 0; i < shop.getProductList().size(); i++) {
                     System.out.println(shop.getProductList().get(i).getName() + " - " + shop.getProductList().get(i).getPrice() + " euro." +
-                            " ("+shop.getProductList().get(i).getCount()+" ones)");
+                            " (" + shop.getProductList().get(i).getCount() + " ones)");
                 }
             }
         }
@@ -214,7 +210,7 @@ public class ShopService {
                         System.out.println("Enter new price.");
                         int c = Integer.parseInt(reader.readLine());
                         shop.getProductList().get(i).setPrice(c);
-                        System.out.println("Price is changed.");
+                        System.out.println("Price was changed successfully.");
                     }
                 }
             }
@@ -237,7 +233,7 @@ public class ShopService {
                         System.out.println("Enter new count.");
                         int c = Integer.parseInt(reader.readLine());
                         shop.getProductList().get(i).setCount(c);
-                        System.out.println("Count is changed.");
+                        System.out.println("Count of product was changed successfully.");
                     }
                 }
             }
@@ -333,21 +329,16 @@ public class ShopService {
         }
     }
 
-    public void printAllProductsInTheShops(){
+    public void printAllProductsInTheShops() {
         List<Shop> shops = shopDataBase.getShopsFromFile();
 
         for (Shop shop : shops) {
             for (Product product : shop.getProductList()) {
-                System.out.println(product.getName() + ", Price: "+ product.getPrice()+" euro"+
-                        ", Count: "+product.getCount() + " ones" +" (" +shop.getName()+")");
+                System.out.println(product.getName() + ", Price: " + product.getPrice() + " euro" +
+                        ", Count: " + product.getCount() + " ones" + " (" + shop.getName() + ")");
             }
         }
     }
-
-    //  SQL
-
-
-
 }
 
 

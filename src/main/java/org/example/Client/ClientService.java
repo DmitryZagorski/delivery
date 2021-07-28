@@ -1,23 +1,11 @@
 package org.example.Client;
 
-import org.example.InterfaceSQL;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClientService {
-
-    public InterfaceSQL interfaceSQL;
-
-    public ClientService(InterfaceSQL interfaceSQL) {
-        this.interfaceSQL = interfaceSQL;
-    }
 
     private ClientDataBase clientDataBase;
 
@@ -45,15 +33,14 @@ public class ClientService {
             if (a == client.getPhoneNumber()) {
                 clients.remove(client);
                 count++;
+                System.out.println("Client with phone number '"+a+"' has deleted successfully.");
             }
         }
         if (count == 0) {
             System.out.println("Client with that phone number doesn't exist.");
         }
-
         clientDataBase.writeClientsToFile(clients);
     }
-
 
     public void addClientToClientList() throws IOException {
         List<Client> clients = clientDataBase.getClientsFromFile();
@@ -73,11 +60,11 @@ public class ClientService {
         String[] array = r.split("");
         if (count == 0 && array.length == 9) {
             clients.add(new Client(a, b));
+            System.out.println("Client was added successfully");
         }
         if (count > 0) {
             System.out.println("Client with that phone number already exist.");
         }
-
         clientDataBase.writeClientsToFile(clients);
     }
 
@@ -92,11 +79,11 @@ public class ClientService {
                 System.out.println("Enter new name.");
                 String b = reader.readLine();
                 client.setName(b);
+                System.out.println("Clients name was changed successfully");
             } else {
-                System.out.println("Client with that phone number already exist.");
+                System.out.println("Client with that phone number doesn't exist.");
             }
         }
-
         clientDataBase.writeClientsToFile(clients);
     }
 
@@ -111,63 +98,11 @@ public class ClientService {
                 System.out.println("Enter new phone number.(9 digits)");
                 int b = Integer.parseInt(reader.readLine());
                 client.setPhoneNumber(b);
+                System.out.println("Clients phone number was changed successfully");
             } else {
-                System.out.println("Client with that phone number already exist.");
+                System.out.println("Client with that phone number doesn't exist.");
             }
         }
-
         clientDataBase.writeClientsToFile(clients);
     }
-
-    //     SQL
-
-    public void addClientToListSQL() throws IOException, SQLException {
-
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the name of client you want to add to SQL.");
-        String nameR = reader.readLine();
-        System.out.println("Enter the phone number if client you want to add to SQL.(9 digits)");
-        int phoneR = Integer.parseInt(reader.readLine());
-        Connection connection = null;
-        try{
-        connection = interfaceSQL.getConnection();
-        Statement statement = null;
-
-        List<Client> clients = interfaceSQL.getListOfClientsFromSQL();
-        int count = 0;
-        for (Client client : clients) {
-            if (client.getPhoneNumber() == phoneR) {
-                count++;
-            }
-        }
-        String r = phoneR + "";
-        String[] array = r.split("");
-        if (count == 0 && array.length == 9) {
-            try {
-                statement = connection.createStatement();
-                // statement.execute("insert into delivery.clients (name, phoneNumber) values" +
-                //       " (" + nameR + "," + phoneR + ")");
-                String q = "insert into delivery.clients (name, phoneNumber) values" +
-                        " (" +"'"+ nameR +"'"+ "," + "'"+ phoneR +"'"+ ")";
-                String f = "create table delivery.products111 (\n" +
-                        "id INT NOT NULL AUTO_INCREMENT,\n" +
-                        "name VARCHAR(45) NOT NULL,\n" +
-                        "price INT NOT NULL,\n" +
-                        "PRIMARY key(id))";
-                statement.execute(q);
-                statement.executeUpdate(f);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        if (count > 0) {
-            System.out.println("Client with that phone number already exist.");
-        }}
-        finally {
-            connection.close();
-
-        }
-
-    }
-
 }
