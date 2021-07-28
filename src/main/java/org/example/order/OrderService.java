@@ -1,10 +1,10 @@
-package org.example.Order;
+package org.example.order;
 
-import org.example.Client.Client;
-import org.example.Client.ClientJsonDataBase;
-import org.example.Product.Product;
-import org.example.Shop.Shop;
-import org.example.Shop.ShopJsonDataBase;
+import org.example.client.Client;
+import org.example.client.ClientJsonDataBase;
+import org.example.product.Product;
+import org.example.shop.Shop;
+import org.example.shop.ShopJsonDataBase;
 
 import java.io.BufferedReader;
 import java.io.IOException;

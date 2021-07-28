@@ -1,4 +1,4 @@
-package org.example.Order;
+package org.example.order;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

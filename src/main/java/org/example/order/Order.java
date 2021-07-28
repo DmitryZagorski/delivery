@@ -1,6 +1,6 @@
-package org.example.Order;
+package org.example.order;
 
-import org.example.Product.Product;
+import org.example.product.Product;
 
 public class Order {
     private int id;

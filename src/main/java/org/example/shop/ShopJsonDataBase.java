@@ -1,4 +1,4 @@
-package org.example.Shop;
+package org.example.shop;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

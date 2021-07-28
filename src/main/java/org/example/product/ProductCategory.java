@@ -1,4 +1,4 @@
-package org.example.Product;
+package org.example.product;
 
 public class ProductCategory {
     private String name;

@@ -1,7 +1,7 @@
-package org.example.Shop;
+package org.example.shop;
 
-import org.example.Product.Product;
-import org.example.Product.ProductCategory;
+import org.example.product.Product;
+import org.example.product.ProductCategory;
 
 import java.io.BufferedReader;
 import java.io.IOException;

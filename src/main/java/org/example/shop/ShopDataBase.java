@@ -1,4 +1,4 @@
-package org.example.Shop;
+package org.example.shop;
 
 import java.util.List;
 

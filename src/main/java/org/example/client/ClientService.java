@@ -1,4 +1,4 @@
-package org.example.Client;
+package org.example.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;

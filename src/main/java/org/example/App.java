@@ -1,14 +1,14 @@
 package org.example;
 
-import org.example.Client.ClientDataBase;
-import org.example.Client.ClientJsonDataBase;
-import org.example.Client.ClientService;
-import org.example.Order.OrderDataBase;
-import org.example.Order.OrderJsonDataBase;
-import org.example.Order.OrderService;
-import org.example.Shop.ShopDataBase;
-import org.example.Shop.ShopJsonDataBase;
-import org.example.Shop.ShopService;
+import org.example.client.ClientDataBase;
+import org.example.client.ClientJsonDataBase;
+import org.example.client.ClientService;
+import org.example.order.OrderDataBase;
+import org.example.order.OrderJsonDataBase;
+import org.example.order.OrderService;
+import org.example.shop.ShopDataBase;
+import org.example.shop.ShopJsonDataBase;
+import org.example.shop.ShopService;
 
 import java.io.BufferedReader;
 import java.io.IOException;

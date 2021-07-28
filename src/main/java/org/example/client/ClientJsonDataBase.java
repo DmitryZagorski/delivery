@@ -1,4 +1,4 @@
-package org.example.Client;
+package org.example.client;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

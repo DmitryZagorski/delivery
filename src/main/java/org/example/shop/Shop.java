@@ -1,6 +1,6 @@
-package org.example.Shop;
+package org.example.shop;
 
-import org.example.Product.Product;
+import org.example.product.Product;
 
 import java.util.List;
 
